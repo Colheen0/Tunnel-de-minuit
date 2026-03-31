@@ -29,7 +29,7 @@ export function Scene() {
             </EffectComposer>
             <Html position={[-7, 2, 0]}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px'}}>
-                    <button onClick={() => setAnimActive('Take 001')}>
+                    <button onClick={() => setAnimActive('idle')}>
                         idle
                     </button>
                     <button onClick={() => setAnimActive('Dance')}>
