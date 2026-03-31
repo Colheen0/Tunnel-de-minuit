@@ -19,7 +19,7 @@ export function Music() {
     <div className="music-container">
       
       <div className="p4-ui-element music-info">
-        NOW PLAYING: CORNER OF MEMORY
+        MUSIQUE JOUÉE: CORNER OF MEMORY
       </div>
 
       {/* On ajoute dynamiquement la classe "playing" si isPlaying est true */}

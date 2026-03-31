@@ -10,8 +10,17 @@ import Model from './Model'
 export function Scene() {
     const pointLightRef = useRef<THREE.PointLight>(null!);
 
-    const [animActive, setAnimActive] = useState('Take 001');
-    
+    const [animActive, setAnimActive] = useState('idle');
+
+    const animations = [
+    { id : 'idle', label : 'Idle' },
+    { id : 'Dance', label : 'Danse' },
+    { id : 'Flip', label : 'Salto' },
+    { id : 'Kick', label : 'Coup de pied' },
+    { id : 'Magic', label : 'Magie' },
+    { id : 'Phone', label : 'Téléphone' }
+    ];
+
     return (
         <>            
             <EffectComposer>
@@ -27,26 +36,16 @@ export function Scene() {
                 <Vignette eskil={false} offset={0.1} darkness={1.1} />
                 <Bloom luminanceThreshold={0.5} mipmapBlur intensity={0.5} />
             </EffectComposer>
-            <Html position={[-7, 2, 0]}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px'}}>
-                    <button onClick={() => setAnimActive('idle')}>
-                        idle
+            <Html position={[-7, 2.5, 0]}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                {animations.map((anim) => (
+                    <button key={anim.id}
+                    className='p4-ui-element'
+                    onClick={() => setAnimActive(anim.id)}>
+
+                        {anim.label}
                     </button>
-                    <button onClick={() => setAnimActive('Dance')}>
-                        Dance
-                    </button>
-                    <button onClick={() => setAnimActive('Flip')}>
-                        Flip
-                    </button>
-                    <button onClick={() => setAnimActive('Kick')}>
-                        Kick
-                    </button>
-                    <button onClick={() => setAnimActive('Magic')}>
-                        Magic
-                    </button>
-                    <button onClick={() => setAnimActive('Phone')}>
-                        Phone
-                    </button>
+                ))}
                 </div>
             </Html>
 
