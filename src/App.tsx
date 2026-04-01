@@ -5,6 +5,7 @@ import { Tunnel } from './tunnel'
 import { Canvas } from '@react-three/fiber'
 
 function App() {
+//on place nos différents éléments ainsi l'effet fog sur la scène
   return (
     <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
       <Music /> 

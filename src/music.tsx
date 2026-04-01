@@ -1,9 +1,12 @@
 import { useState, useRef } from 'react'
 
 export function Music() {
+
+//on fait 2 variables d'état pour controler le style du bouton pour changer son aspect
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef<HTMLAudioElement>(null)
 
+//ici on fait un if qui change le style du bonton grace au variable d'avant
   const togglePlay = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -15,6 +18,7 @@ export function Music() {
     }
   }
 
+//ici on créer directement le bouton en htlm avec les noms différents en fonctions de son état ainsi que la musique utiliser qui est importer dans le html 
   return (
     <div className="music-container">
       
@@ -22,7 +26,6 @@ export function Music() {
         MUSIQUE JOUÉE: CORNER OF MEMORY
       </div>
 
-      {/* On ajoute dynamiquement la classe "playing" si isPlaying est true */}
       <button 
         onClick={togglePlay}
         className={`p4-ui-element music-btn ${isPlaying ? 'playing' : ''}`}

@@ -24,7 +24,7 @@ export function Scene() {
 
     return (
         <>        
-        // l'effect composer est l'effet visiuel pour donner l'effet télé comme dans persona 4    
+// l'effect composer est l'effet visiuel pour donner l'effet télé comme dans persona 4    
             <EffectComposer>
                 <Scanline 
                     blendFunction={BlendFunction.OVERLAY} 
@@ -38,7 +38,7 @@ export function Scene() {
                 <Vignette eskil={false} offset={0.1} darkness={1.1} />
                 <Bloom luminanceThreshold={0.5} mipmapBlur intensity={0.5} />
             </EffectComposer>
-            // on utilise le html pour faire une ui dans la scène 3d et on utilise le .map pour appeler le tableau des animations et créer les boutons avec le nom des label et le id pour appeler la bonne animation
+// on utilise le html pour faire une ui dans la scène 3d et on utilise le .map pour appeler le tableau des animations et créer les boutons avec le nom des label et le id pour appeler la bonne animation
             <Html position={[-7, 2.5, 0]}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 {animations.map((anim) => (
@@ -51,7 +51,7 @@ export function Scene() {
                 ))}
                 </div>
             </Html>
-                //ici on place les lumières et le model dans la scène avec le animActive qui change l'animation avec le bouton correspondant
+//ici on place les lumières et le model dans la scène avec le animActive qui change l'animation avec le bouton correspondant
             <Model currentAnimation={animActive} position={[0, -1, 2.8]} scale={1} />
             {/* <OrbitControls /> */}
             <ambientLight intensity={0.5} />
