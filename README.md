@@ -6,7 +6,7 @@ Bienvenue sur la chaîne de minuit pour un programme spécial où vous pouvez ma
 
 Le concept de ce projet est inspiré du jeu Persona 4, dans lequel la chaîne de minuit est un programme qui se lance uniquement les nuits de brouillard après minuit. Ici, on reprend le concept en mettant en scène un modèle 3D au centre d'un tourbillon de torus infinis jaunes avec un fond noir qui reprend l'imagerie de Persona 4. Pour ce qui est de l'interaction, l'utilisateur peut lancer des animations sur le modèle dans la scène via des boutons sur le côté de l'écran. Il y en a 6 en tout :
 
-idle : qui est la pose en T où le modèle ne bouge pas et qui est "l'animation de base" quand on arrive sur l'application.
+idle : une animation légère ou le model regarde à droite et à gauche et qui est "l'animation de base" quand on arrive sur l'application.
 
 danse : qui est une danse de breakdance.
 
@@ -32,6 +32,8 @@ Toutes les animations ainsi que le modèle ont été récupérés sur le site Mi
 Le modèle : https://www.mixamo.com/#/?page=1&query=xbot&type=Character (x bot)
 
 Les animations :
+
+idle : https://www.mixamo.com/#/?page=3&query=idle (Holding idle)
 
 danse : https://www.mixamo.com/#/?page=1&query=breakdance&type=Motion%2CMotionPack (breakdance freeze var 2)
 salto : https://www.mixamo.com/#/?page=1&query=flip&type=Motion%2CMotionPack (run on flip)

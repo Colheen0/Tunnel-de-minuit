@@ -10,11 +10,11 @@ import Model from './Model'
 export function Scene() {
     const pointLightRef = useRef<THREE.PointLight>(null!);
 
-    const [animActive, setAnimActive] = useState('idle');
+    const [animActive, setAnimActive] = useState('Idle');
 
 // on fait un tableau des animations avec 2 pripriété : id et label (id sert à appeler l'animation dans le model et label sert à la nommé dans l'application elle même) pour pouvoir l'appeler avec un .map
     const animations = [
-    { id : 'idle', label : 'Idle' },
+    { id : 'Idle', label : 'Idle' },
     { id : 'Dance', label : 'Danse' },
     { id : 'Flip', label : 'Salto' },
     { id : 'Kick', label : 'Coup de pied' },
